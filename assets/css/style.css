@@ -1518,8 +1518,8 @@ section {
 --------------------------------*/
 .whatsapp-float {
   position: fixed;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   bottom: 20px;
   right: 20px;
   background-color: #25d366;
