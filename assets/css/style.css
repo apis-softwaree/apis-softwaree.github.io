@@ -502,6 +502,7 @@ h1, h2, h3, h4, h5, h6 {
 section {
   padding: 20px 0;
   overflow: hidden;
+  text-align: justify;
 }
 
 .section-bg {
@@ -539,53 +540,6 @@ section {
 @media (min-width: 1024px) {
   .section-title p {
     width: 50%;
-  }
-}
-
-/*--------------------------------------------------------------
-# Breadcrumbs
---------------------------------------------------------------*/
-.breadcrumbs {
-  padding: 20px 0;
-  background-color: #f1f6fe;
-  min-height: 40px;
-}
-.breadcrumbs h2 {
-  font-size: 24px;
-  font-weight: 300;
-  margin: 0;
-}
-@media (max-width: 992px) {
-  .breadcrumbs h2 {
-    margin: 0 0 10px 0;
-  }
-}
-.breadcrumbs ol {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  font-size: 14px;
-}
-.breadcrumbs ol li + li {
-  padding-left: 10px;
-}
-.breadcrumbs ol li + li::before {
-  display: inline-block;
-  padding-right: 10px;
-  color: #6c757d;
-  content: "/";
-}
-@media (max-width: 768px) {
-  .breadcrumbs .d-flex {
-    display: block !important;
-  }
-  .breadcrumbs ol {
-    display: block;
-  }
-  .breadcrumbs ol li {
-    display: inline-block;
   }
 }
 
@@ -640,7 +594,7 @@ section {
   line-height: 28px;
   margin-bottom: 0;
 }
-.featured-services .icon-box:hover .title a, .featured-services .icon-box:hover .description {
+.featured-services .icon-box:hover .title, .featured-services .icon-box:hover .description {
   color: #fff;
 }
 .featured-services .icon-box:hover .icon i {
@@ -1557,4 +1511,34 @@ section {
     text-align: center;
     padding: 2px 0;
   }
+}
+
+/*-------------------------------- 
+# Whatsapp-button 
+--------------------------------*/
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 20px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 1000; /* Fica acima de todos os elementos */
+  display: flex; /* Novo: usamos flexbox */
+  justify-content: center; /* Novo: centraliza horizontalmente */
+  align-items: center; 
+}
+
+.whatsapp-float i {
+  margin: 10px; /* Centraliza o ícone verticalmente */
+}
+
+.whatsapp-float:hover {
+  background-color: #004941; /* Cor ao passar o mouse */
+
 }
