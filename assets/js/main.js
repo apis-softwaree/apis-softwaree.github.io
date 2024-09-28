@@ -280,20 +280,15 @@
     })
   });
 
-  document.addEventListener("DOMContentLoaded", function () {
-    const video = document.getElementById("meuVideo");
-    let flag = true;
+  const video = document.getElementById("meuVideo");
 
-    // Mostrar os controles novamente ao clicar no vídeo
-    video.addEventListener("click", function () {
-      if (!flag) {
-        video.setAttribute("controls", "controls");
-        flag = true;
-      } else {
-        video.removeAttribute("controls");
-        flag = false;
-      }
-    });
+  // Mostrar os controles novamente ao clicar no vídeo
+  video.addEventListener("pause", function () {
+    video.setAttribute("controls", "controls");
+  });
+
+  video.addEventListener("play", function () {
+    video.removeAttribute("controls");
   });
 })()
 
