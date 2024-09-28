@@ -282,7 +282,7 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     const video = document.getElementById("meuVideo");
-    let flag = false;
+    let flag = true;
 
     // Mostrar os controles novamente ao clicar no vídeo
     video.addEventListener("click", function () {
