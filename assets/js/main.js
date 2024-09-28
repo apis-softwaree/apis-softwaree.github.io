@@ -284,10 +284,6 @@
 
 const video = document.getElementById("meuVideo");
 
-// Esconder os controles quando o vídeo começa a tocar
-video.addEventListener("play", function() {
-  video.removeAttribute("controls");
-});
 
 // Mostrar os controles novamente ao clicar no vídeo
 video.addEventListener("click", function() {
@@ -296,9 +292,4 @@ video.addEventListener("click", function() {
   } else {
     video.removeAttribute("controls");
   }
-});
-
-// Adiciona o evento 'pause' para mostrar os controles novamente
-video.addEventListener("pause", function() {
-  video.setAttribute("controls", "controls");
 });
