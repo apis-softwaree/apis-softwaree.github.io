@@ -283,18 +283,37 @@
   const video = document.getElementById("meuVideo");
 
   // Esconde os controles quando o vídeo começa
-  video.addEventListener('play', function () {
-    console.log('play');
-    video.play();
-    video.controls = false;
+  video.addEventListener('click', function () {
+    if (video.paused) {
+      console.log("Video está rodando");
+      video.controls = false;
+      video.play();
+      setTimeout(() => {
+        video.controls = false; // Esconde os controles após 200ms para evitar conflito de clique
+    }, 200);
+    } else {
+      console.log("Video Está pausado");
+      video.pause();
+      setTimeout(() => {
+        video.controls = true; // Esconde os controles após 200ms para evitar conflito de clique
+    }, 200);
+    }
+    
+    // console.log('play');
+    // video.play();
+    // video.controls = false;
   });
 
   // Mostra os controles quando o usuário clica no vídeo
-  video.addEventListener('click', function () {
-    console.log('pause');
-    video.pause();
-    video.controls = !video.controls; // Alterna os controles
-  });
+  // video.addEventListener('click', function () {
+  //   if (video.paused) {
+  //     video.play(); // Se o vídeo estiver pausado, dê play
+  //     video.controls = false; // Esconde os controles
+  //   } else {
+  //     video.pause(); // Se o vídeo estiver tocando, pause
+  //     video.controls = true; // Mostra os controles
+  //   }
+  // });
 
 })()
 
