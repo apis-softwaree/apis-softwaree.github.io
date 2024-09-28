@@ -287,7 +287,8 @@ const video = document.getElementById("meuVideo");
 
 // Mostrar os controles novamente ao clicar no vídeo
 video.addEventListener("click", function() {
-  if (video.click) {
+  if (video.onplaying) {
+    console.log("Play");
     video.setAttribute("controls", "controls");
   } else {
     video.removeAttribute("controls");
