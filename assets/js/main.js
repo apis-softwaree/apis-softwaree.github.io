@@ -282,15 +282,19 @@
 
   const video = document.getElementById("meuVideo");
 
-  // Mostrar os controles novamente ao clicar no vídeo
-  video.addEventListener("pause", function () {
-    console.log("Video Pausado");
-    video.setAttribute("controls", "controls");
+  // Esconde os controles quando o vídeo começa
+  video.addEventListener('play', function () {
+    console.log('play');
+    video.play();
+    video.controls = false;
   });
 
-  video.addEventListener("play", function () {
-    console.log("Video play");
-    video.removeAttribute("controls");
+  // Mostra os controles quando o usuário clica no vídeo
+  video.addEventListener('click', function () {
+    console.log('pause');
+    video.pause();
+    video.controls = !video.controls; // Alterna os controles
   });
+
 })()
 
