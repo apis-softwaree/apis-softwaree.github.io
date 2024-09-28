@@ -284,10 +284,12 @@
 
   // Mostrar os controles novamente ao clicar no vídeo
   video.addEventListener("pause", function () {
+    console.log("Video Pausado");
     video.setAttribute("controls", "controls");
   });
 
   video.addEventListener("play", function () {
+    console.log("Video play");
     video.removeAttribute("controls");
   });
 })()
